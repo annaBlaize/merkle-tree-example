@@ -79,7 +79,8 @@
     },
     "dependencies": {
         "@openzeppelin/contracts": "4.7.3",
-        "@openzeppelin/contracts-upgradeable": "4.7.3"
+        "@openzeppelin/contracts-upgradeable": "4.7.3",
+        "@openzeppelin/merkle-tree": "^1.0.1"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.1.2",

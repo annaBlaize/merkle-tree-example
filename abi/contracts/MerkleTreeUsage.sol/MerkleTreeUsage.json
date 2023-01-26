@@ -1,0 +1,22 @@
+[
+  "error AlreadyClaimed(address)",
+  "error ProofFailed(address,uint256,bytes32[])",
+  "error ZeroAddress()",
+  "event BaseUpdated(address indexed)",
+  "event Claim(address indexed,uint256 indexed)",
+  "event Initialized(uint8)",
+  "event IsClaimedUpdated(address indexed,bool indexed)",
+  "event OwnershipTransferred(address indexed,address indexed)",
+  "event RootUpdated(bytes32 indexed)",
+  "function base() view returns (address)",
+  "function checkClaimProof(address,uint256,bytes32[]) view returns (bool)",
+  "function claim(uint256,bytes32[])",
+  "function initialize(bytes32,address)",
+  "function isClaimed(address) view returns (bool)",
+  "function owner() view returns (address)",
+  "function renounceOwnership()",
+  "function root() view returns (bytes32)",
+  "function setBase(address)",
+  "function setRoot(bytes32)",
+  "function transferOwnership(address)"
+]

@@ -1,10 +1,6 @@
-# Solidity TS Hardhat project template
+# Solidity Merkle tree usage example
 
-This is sceleton for using in production, including development, audit and testing of contracts on Solidity with Hardhat, Ethers and TypeScript.
-
-Note 1. This project template is ready for use, only README.md files are not ready, they are in the process. In the future, this template can be improved and supplemented.
-
-Note 2. In GitHub it can be reused by clicking the "Use this template" button at the top of the page.
+This is example of use case of Merkle tree tools for smart-contracts development and testing.
 
 The MIT license is used, if otherwise, replace the `LICENSE` file and the "license" field in the `package.json` file according to your needs.
 

@@ -1,12 +1,13 @@
 import { BigNumberish } from "ethers";
-import { SnapshotRestorer, time } from "@nomicfoundation/hardhat-network-helpers";
-import { takeSnapshot, setBalance } from "@nomicfoundation/hardhat-network-helpers";
+import { SnapshotRestorer } from "@nomicfoundation/hardhat-network-helpers";
+import { takeSnapshot } from "@nomicfoundation/hardhat-network-helpers";
 import { StandardMerkleTree } from "@openzeppelin/merkle-tree";
 import { upgrades } from "hardhat";
 import { expect } from "chai";
 import { ethers } from "hardhat";
 
 import type { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
+import { generateMerkleTree } from "./helpers";
 
 import { MerkleTreeUsage, ERC20Mock } from "../typechain-types";
 const constants = ethers.constants;
@@ -49,7 +50,7 @@ describe("MerkleTreeUsage", function () {
         }
 
         // Generate merkle tree
-        merkleTree = StandardMerkleTree.of(claimList, ["address", "uint256"]);
+        merkleTree = generateMerkleTree(claimList);
         merkleRoot = merkleTree.root;
 
         // Deploy base token
@@ -155,7 +156,6 @@ function getTreeEntry(
 ): { proof: string[]; leaf: [string, string] } {
     for (const [i, v] of tree.entries()) {
         if (v[0] === address) {
-            // (3)
             const proof = tree.getProof(i);
             return {
                 proof,
